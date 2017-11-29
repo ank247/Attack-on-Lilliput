@@ -1,1 +1,9 @@
+#include<iostream>
+#include<stdlib.h>
 
+int main()
+{
+  uint8_t A[16] ;
+  
+  return 0;
+}
