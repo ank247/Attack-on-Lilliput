@@ -5,7 +5,8 @@
 
 int main()
 {
-  uint8_t A[16], key[16] ;                          /* Binary number stored. */
+  char* A;                                   /* Input the PlainText. */
+  uint8_t key[16] ;                          /* Binary number stored. */
   
   return 0;
 }
