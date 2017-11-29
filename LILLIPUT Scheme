@@ -5,7 +5,7 @@
 
 int main()
 {
-  uint8_t A[16] ;                          /* Binary number stored. */
+  uint8_t A[16], key[16] ;                          /* Binary number stored. */
   
   return 0;
 }
