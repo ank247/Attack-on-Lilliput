@@ -1,9 +1,11 @@
+/* C++ for the following. */
+
 #include<iostream>
 #include<stdlib.h>
 
 int main()
 {
-  uint8_t A[16] ;
+  uint8_t A[16] ;                          /* Binary number stored. */
   
   return 0;
 }
