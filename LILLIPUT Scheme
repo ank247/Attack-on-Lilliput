@@ -32,6 +32,8 @@ int i;
       
     }
   }
+  n = n - 16;
+  return Encrypted_Number(EncryptedNumber. b);
 }
 
 int main()
