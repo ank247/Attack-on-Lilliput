@@ -28,9 +28,16 @@ int main()
   uint8_t key[16], RK[2] ;                   /* Binary number stored. RK are two binary digits[0,1] used as a key*/
   cin >> A ;                                 /* Input the Arbitrary String(including integers, symbols and so on) */
   Binary_Conversion(A);
-  int n;
+  int n, i;
   uint64_t b;
   n = strlen(b);
+  if((n = n % 16) != 0)
+  {
+    for(i = 0; i < n; i++)
+    {
+      strcat(b,0);
+    }
+  }
   return 0;
 }
 
