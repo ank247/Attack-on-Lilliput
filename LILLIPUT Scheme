@@ -23,10 +23,14 @@ uint64_t *Binary_Conversion(char* A)
 
 void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b)
 {
+int i;
   static int n = strlen(b);
   if(n > 0)
   {
-    
+    for(i = n-1; i => n-16; i--)
+    {
+      
+    }
   }
 }
 
