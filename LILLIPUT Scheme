@@ -25,11 +25,11 @@ uint64_t *Binary_Conversion(char* A)
 int main()
 {
   char* A;                                   /* Input the PlainText. */
+  uint64_t *b;
   uint8_t key[16], RK[2] ;                   /* Binary number stored. RK are two binary digits[0,1] used as a key*/
   cin >> A ;                                 /* Input the Arbitrary String(including integers, symbols and so on) */
-  Binary_Conversion(A);
+  b = Binary_Conversion(A);
   int n, i;
-  uint64_t b;
   n = strlen(b);
   if(int m = (n = n % 16) != 0)
   {
