@@ -25,8 +25,9 @@ uint64_t *Binary_Conversion(char* A)
 /* SBox will be similar to key-generation, but with unique speciality of rounding. */
 /* SBox and key are generated and sent by an array for XOR. */
 /* Arrays will be known with length of 8. */
+/* l is start and m is end. */
 
-void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b, int n, uint64_t key, uint64_t S_Box) 
+void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b, int l, int m, uint64_t key, uint64_t S_Box) 
 {
   int i;
   if(n > 0)
