@@ -21,10 +21,9 @@ uint64_t *Binary_Conversion(char* A)
   return &BinaryConversion;
 }
 
-void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b, int n)
+void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b, int n, uint64_t *key, uint64_t S_Box)
 {
-int i;
- int n ;
+  int i;
   if(n > 0)
   {
     for(i = n-1; i => n-16; i--)
