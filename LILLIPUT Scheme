@@ -37,7 +37,7 @@ void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b, int n, uint64_t ke
     }
   }
   n = n - 16;
-  return Encrypted_Number(EncryptedNumber. b);
+  return Encrypted_Number(EncryptedNumber. b, n, key, S_Box);
 }
 
 int main()
