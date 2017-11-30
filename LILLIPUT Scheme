@@ -31,13 +31,14 @@ int main()
   int n, i;
   uint64_t b;
   n = strlen(b);
-  if((n = n % 16) != 0)
+  if(int m = (n = n % 16) != 0)
   {
     for(i = 0; i < n; i++)
     {
       strcat(b,0);
     }
   }
+  uint64_t *EncryptedNumber;
   return 0;
 }
 
