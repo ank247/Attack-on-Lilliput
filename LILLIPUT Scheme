@@ -21,6 +21,7 @@ uint64_t *Binary_Conversion(char* A)
   return &BinaryConversion;
 }
 
+void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b)
 
 int main()
 {
