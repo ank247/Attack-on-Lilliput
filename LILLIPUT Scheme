@@ -3,6 +3,7 @@
 #include<iostream>
 namespace std;
 #include<stdlib.h>
+#include<string.h>
 
 uint64_t *Binary_Conversion(char* A)
 {  
@@ -26,8 +27,10 @@ int main()
   char* A;                                   /* Input the PlainText. */
   uint8_t key[16], RK[2] ;                   /* Binary number stored. RK are two binary digits[0,1] used as a key*/
   cin >> A ;                                 /* Input the Arbitrary String(including integers, symbols and so on) */
-  uint64_t Binary_Conversion(A);
-  
+  Binary_Conversion(A);
+  int n;
+  uint64_t b;
+  n = strlen(b);
   return 0;
 }
 
