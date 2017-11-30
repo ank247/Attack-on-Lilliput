@@ -13,3 +13,18 @@ int main()
   
   return 0;
 }
+
+uint64_t Binary_Conversion(char* A)
+{  
+  int i;
+   char* BinaryConversion ;
+   BinaryConversion = '' ;
+  for(i = 0; i < '\0'; i++)
+  {
+    int a;
+    a = A[i] ;
+    uint64_t b;
+    b = binary(a) ;
+    BinaryConversion = strcat(BinaryConversion, b) ;
+  }
+}
