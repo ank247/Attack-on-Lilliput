@@ -39,6 +39,7 @@ int main()
     }
   }
   uint64_t *EncryptedNumber;
+  Encrypted_Number(EncryptedNumber, b);
   return 0;
 }
 
