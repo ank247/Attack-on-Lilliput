@@ -49,7 +49,7 @@ void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b, int l, int m, uint
   if(n + 1 == l + 8)
   {
     J[mid + j] = XOR(b[mid + j], J[mid - 1 - j]); 
-    EncryptedNumber[mid] = J[mid];
+    EncryptedNumber[mid + j] = J[mid + j];
   }
   else if(n == l)
   {
