@@ -60,11 +60,13 @@ void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b, int l, int m, uint
     J[mid + j] = XOR(J[mid + j], J[mid - 5]);
     J[mid + j] = XOR(J[mid + j], J[mid - 6]);
     J[mid + j] = XOR(J[mid + j], J[mid - 7]);
+    EncryptedNumber[mid + j] = J[mid + j];
   }
   else
   {
     J[mid + j] = XOR(b[mid + j], J[mid - 1 - j]);
     J[mid + j] = XOR(J[mid + j], J[mid - 1]);
+    EncryptedNumber[mid + j] = J[mid + j];
   }
   j++;
   return Encrypted_Number(EncryptedNumber, b, l, m, key, S_Box);
