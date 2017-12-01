@@ -52,14 +52,16 @@ void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b, int l, int m, uint
   else if(n == l)
   {
     J[mid + j] = XOR(b[mid + j], J[mid - 1 - j]);
-    J[mid + j] = XOR(b[mid + j], J[mid - 1 - j]);
-    J[mid + j] = XOR(b[mid + j], J[mid - 1 - j]);
-    J[mid + j] = XOR(b[mid + j], J[mid - 1 - j]);
-    J[mid + j] = XOR(b[mid + j], J[mid - 1 - j]);
-    J[mid + j] = XOR(b[mid + j], J[mid - 1 - j]);
-    J[mid + j] = XOR(b[mid + j], J[mid - 1 - j]);
-    J[mid + j] = XOR(b[mid + j], J[mid - 1 - j]);
+    J[mid + j] = XOR(b[mid + j], J[mid - 1]);
+    J[mid + j] = XOR(b[mid + j], J[mid - 2]);
+    J[mid + j] = XOR(b[mid + j], J[mid - 3]);
+    J[mid + j] = XOR(b[mid + j], J[mid - 4]);
+    J[mid + j] = XOR(b[mid + j], J[mid - 5]);
+    J[mid + j] = XOR(b[mid + j], J[mid - 6]);
+    J[mid + j] = XOR(b[mid + j], J[mid - 7]);
   }
+  
+  j++;
   return Encrypted_Number(EncryptedNumber, b, l, m, key, S_Box);
 }
 
