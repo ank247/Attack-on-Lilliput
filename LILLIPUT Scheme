@@ -27,14 +27,19 @@ uint64_t *Binary_Conversion(char* A)
 /* Arrays will be known with length of 8. */
 /* l is start and m is end. */
 
+int j = 0;
+
 void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b, int l, int m, uint64_t key, uint64_t S_Box) 
 {
-  int j = 0, l, m, mid;
+  static int j ;
+  int l, m, mid;
   mid = (l + m)/ 2;
   uint64_t *J ;
-  int mid - 1 + j;
-  if(n > l)
+  int n = mid - 1 - j;
+  if(n == l+1)
   {
+    break;
+  }
     for(i = n-1; i => n-16; i--)
     {
       
