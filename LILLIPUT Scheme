@@ -73,6 +73,18 @@ void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b, int l, int m, uint
   return Encrypted_Number(EncryptedNumber, b, l, m, key, S_Box);       /* Recursion function call. */
 }
 
+uint64_t XOR(int A, int B)                                             /* Exclusive-OR function. */
+{
+  if(A == B)
+  {
+   return 0;
+  }
+  else if(A != B)
+  {
+   return 1;
+  }
+}
+
 int main()
 {
   char* A;                                   /* Input the PlainText. */
