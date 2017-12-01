@@ -29,8 +29,11 @@ uint64_t *Binary_Conversion(char* A)
 
 void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b, int l, int m, uint64_t key, uint64_t S_Box) 
 {
-  int i;
-  if(n > 0)
+  int j = 0, l, m, mid;
+  mid = (l + m)/ 2;
+  uint64_t *J ;
+  int mid - 1 + j;
+  if(n > l)
   {
     for(i = n-1; i => n-16; i--)
     {
@@ -38,7 +41,7 @@ void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b, int l, int m, uint
     }
   }
   n = n - 16;
-  return Encrypted_Number(EncryptedNumber. b, n, key, S_Box);
+  return Encrypted_Number(EncryptedNumber. b, l, m, key, S_Box);
 }
 
 int main()
