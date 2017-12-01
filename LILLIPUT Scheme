@@ -44,10 +44,11 @@ void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b, int l, int m, uint
   
   J[mid - 1 - j] = XOR(b[mid - 1 - j], key[j]);
   J[mid - 1 - j] = XOR(S[j], J[mid - 1 - j]);
-  
+  EncryptedNumber[mid - 1 - j] = b[mid - 1 - j];
   if(n + 1 == l + 8)
   {
     J[mid] = XOR(b[mid], J[mid - 1]); 
+    EncryptedNumber[mid] = J[mid];
   }
   else if(n == l)
   {
