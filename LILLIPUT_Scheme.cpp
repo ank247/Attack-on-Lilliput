@@ -105,6 +105,7 @@ void permutation(uint64_t *EncryptedNumber, uint64_t key1[])
 int main()
 {
   char *A;                                   /* Input the PlainText. */
+  uint64_t *EncryptedNumber;                 /* An Array to store the bits of the corresponding column bit after each operation. */
   uint64_t *b;                               /* Binary number stored. */
   uint8_t key[16], key1[16], RK[2] ;         /* RK are two binary digits[0,1] used as a key*/
   int round;                                 /* Number of rounds to be performed. */
@@ -121,7 +122,6 @@ int main()
       strcat(b,0);                           /* converting string to the multiple of 16 bits. */
     }
   }
-  uint64_t *EncryptedNumber;
   n = strlen(b);
   do{
       Encrypted_Number(EncryptedNumber, b, n);
