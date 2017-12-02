@@ -21,7 +21,7 @@ uint64_t *Binary_Conversion(char *A)
   return &BinaryConversion;
 }
 
-uint64_t XOR(int A, int B)                                             /* Exclusive-OR function. */
+uint64_t XOR(uint64_t A, uint64_t B)                                             /* Exclusive-OR function. */
 {
   if(A == B)
   {
