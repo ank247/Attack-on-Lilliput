@@ -2,6 +2,11 @@
 using namespace std;
 #include<string.h>
 
+void key_encrypt(uint64_t BitString[], uint64_t key[], uint64_t *EncryptNumber)
+{
+
+}
+
 int main()
 {
   uint64_t *EncryptNumber ;              /* EncryptNumber is the array we get before permutation. */
