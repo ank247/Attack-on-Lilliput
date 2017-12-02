@@ -87,7 +87,7 @@ void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b, int l, int m, uint
 
 void permutation(uint64_t *EncryptedNumber, uint64_t key1[])
 {
-  uint64_t key2[16];
+  uint64_t key2[16], permuted_number[16];                             /* Final output is permuted_number Array. */
   for(int i = 0; i < 16; i++)
   {
     key2[key[i]] = EncryptNumber[i];
@@ -95,6 +95,10 @@ void permutation(uint64_t *EncryptedNumber, uint64_t key1[])
   for(int i = 0; i < 16; i++)
   {
      EncryptNumber[i] = key2[i] ;
+  }
+  for(int i = 0; i < 16; i++)
+  {
+     permuted_number[i] = key2[16-i] ;
   }
 }
 
