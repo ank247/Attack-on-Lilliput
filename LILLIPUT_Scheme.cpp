@@ -130,5 +130,5 @@ int main()
       permutation(EncryptedNumber, key1, permuted_number);
       round--;
   }while(round > 0)
-  return 0;
+  return 0; 
 }
