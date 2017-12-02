@@ -1,7 +1,7 @@
 /* C++ for the following. */
 
 #include<iostream>
-namespace std;
+using namespace std;
 #include<stdlib.h>
 #include<string.h>
 
@@ -13,12 +13,24 @@ uint64_t *Binary_Conversion(char* A)
   for(i = 0; i < '\0'; i++)
   {
     int a;
-    a = A[i] ;
+    a = numeric(A[i]) ;                                       /* finding numeric value of letter, symbols for converting into bits.*/
     uint64_t b;
     b = binary(a) ;
     BinaryConversion = strcat(BinaryConversion, b) ;
   }
   return &BinaryConversion;
+}
+
+uint64_t XOR(int A, int B)                                             /* Exclusive-OR function. */
+{
+  if(A == B)
+  {
+   return 0;
+  }
+  else if(A != B)
+  {
+   return 1;
+  }
 }
 
 /* The key will be an array of 1-digit(0 or 1) consisting. */
@@ -71,18 +83,6 @@ void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b, int l, int m, uint
   }
   j++;
   return Encrypted_Number(EncryptedNumber, b, l, m, key, S_Box);       /* Recursion function call. */
-}
-
-uint64_t XOR(int A, int B)                                             /* Exclusive-OR function. */
-{
-  if(A == B)
-  {
-   return 0;
-  }
-  else if(A != B)
-  {
-   return 1;
-  }
 }
 
 int main()
