@@ -2,9 +2,21 @@
 using namespace std;
 #include<string.h>
 
+void XOR(uint64_t A, uint64_t B)
+{
+  if(A == B)
+   {
+    return 0;
+   }
+  else if(A != B)
+   {
+    return 1;
+   }
+}
+
 void key_encrypt(uint64_t BitString[], uint64_t key[], uint64_t *EncryptNumber)
 {
-
+  
 }
 
 int main()
