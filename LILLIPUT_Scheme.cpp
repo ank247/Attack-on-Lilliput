@@ -123,6 +123,8 @@ int main()
     }
   }
   n = strlen(b);
+  l = n - 16;
+  m = n - 1;
   do{
       Encrypted_Number(EncryptedNumber, b, n);
       permutation(EncryptedNumber, key1, permuted_number);
