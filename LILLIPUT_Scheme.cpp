@@ -106,7 +106,9 @@ int main()
 {
   char *A;                                   /* Input the PlainText. */
   uint64_t *b;                               /* Binary number stored. */
-  uint8_t key[16], key1[16], RK[2] ;                   /* RK are two binary digits[0,1] used as a key*/
+  uint8_t key[16], key1[16], RK[2] ;         /* RK are two binary digits[0,1] used as a key*/
+  int round;                                 /* Number of rounds to be performed. */
+  cin >> round;
   cin >> A ;                                 /* Input the Arbitrary String(including integers, symbols and so on) */
   b = Binary_Conversion(A);
   int n, i;
@@ -120,7 +122,10 @@ int main()
   }
   uint64_t *EncryptedNumber;
   n = strlen(b);
-  Encrypted_Number(EncryptedNumber, b, n);
-  permutation(EncryptedNumber, key1, permuted_number);
+  i = 0;
+  do{
+      Encrypted_Number(EncryptedNumber, b, n);
+      permutation(EncryptedNumber, key1, permuted_number);
+  }while(i > round)
   return 0;
 }
