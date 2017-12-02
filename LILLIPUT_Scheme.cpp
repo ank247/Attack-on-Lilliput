@@ -115,7 +115,7 @@ int main()
   {
     for(i = 0; i < m; i++)
     {
-      strcat(b,0);
+      strcat(b,0);                           /* converting string to the multiple of 16 bits. */
     }
   }
   uint64_t *EncryptedNumber;
