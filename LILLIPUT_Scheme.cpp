@@ -108,6 +108,7 @@ int main()
   uint64_t *b;                               /* Binary number stored. */
   uint8_t key[16], key1[16], RK[2] ;         /* RK are two binary digits[0,1] used as a key*/
   int round;                                 /* Number of rounds to be performed. */
+  int l, m;                                  /* 'l' for start of the following string bits, and, 'm' for the end. */
   cin >> round;
   cin >> A ;                                 /* Input the Arbitrary String(including integers, symbols and so on) */
   b = Binary_Conversion(A);
