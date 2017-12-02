@@ -85,6 +85,19 @@ void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b, int l, int m, uint
   return Encrypted_Number(EncryptedNumber, b, l, m, key, S_Box);       /* Recursion function call. */
 }
 
+void permutation(uint64_t *EncryptedNumber, uint64_t key1[])
+{
+  uint64_t key2[16];
+  for(int i = 0; i < 16; i++)
+  {
+    key2[key[i]] = EncryptNumber[i];
+  }
+  for(int i = 0; i < 16; i++)
+  {
+     EncryptNumber[i] = key2[i] ;
+  }
+}
+
 int main()
 {
   char* A;                                   /* Input the PlainText. */
