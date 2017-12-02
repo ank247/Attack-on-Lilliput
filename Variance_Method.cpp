@@ -14,9 +14,48 @@ void XOR(uint64_t A, uint64_t B)
    }
 }
 
-void key_encrypt(uint64_t BitString[], uint64_t key[], uint64_t *EncryptNumber)
+void Encrypted_Number(uint64_t *EncryptedNumber, uint64_t *b, int l, int m, uint64_t key, uint64_t S_Box) 
 {
+  static int j ;                                               /* static int to let add on 1 on each call. */
+  int l, m, mid;                                               
+  mid = (l + m)/ 2;
+  uint64_t *J ;                                                /* An rough Array to store the Jth inter-mediate XOR output. */
+  int n = mid - 1 - j;
   
+  if(n == l+1)                                                /* Break in order to call next 16 bits. */
+  {
+    break;
+  }
+  
+  J[mid - 1 - j] = XOR(b[mid - 1 - j], key[j]);              /* Key XOR for 1st Jth bit from mid-1. */
+  J[mid - 1 - j] = XOR(S[j], J[mid - 1 - j]);                /* S-Box XOR for the same 2nd Jth of the same bit from mid-1. */
+  EncryptedNumber[mid - 1 - j] = b[mid - 1 - j];             /* Finally stored for Permutation. */
+  
+  if(n + 1 == l + 8)                                         /* Mid-point case. */
+  {
+    J[mid + j] = XOR(b[mid + j], J[mid - 1 - j]); 
+    EncryptedNumber[mid + j] = J[mid + j];
+  }
+  else if(n == l)                                            /* End-point case. */
+  {
+    J[mid + j] = XOR(b[mid + j], J[mid - 1 - j]);
+    J[mid + j] = XOR(J[mid + j], J[mid - 1]);
+    J[mid + j] = XOR(J[mid + j], J[mid - 2]);
+    J[mid + j] = XOR(J[mid + j], J[mid - 3]);
+    J[mid + j] = XOR(J[mid + j], J[mid - 4]);
+    J[mid + j] = XOR(J[mid + j], J[mid - 5]);
+    J[mid + j] = XOR(J[mid + j], J[mid - 6]);
+    J[mid + j] = XOR(J[mid + j], J[mid - 7]);
+    EncryptedNumber[mid + j] = J[mid + j];
+  }
+  else                                                     /* General cases. */
+  {
+    J[mid + j] = XOR(b[mid + j], J[mid - 1 - j]);
+    J[mid + j] = XOR(J[mid + j], J[mid - 1]);
+    EncryptedNumber[mid + j] = J[mid + j];
+  }
+  j++;
+  return Encrypted_Number(EncryptedNumber, b, l, m, key, S_Box);    /* Recursion function call. */
 }
 
 int main()
@@ -37,6 +76,6 @@ int main()
   {
     cin >> SBox[i]; 
   }
-  key_encrypt(BitString, key, EncryptNumber);
+  Encrypted_Number(EncryptNumber, BitString, l, m, key, SBox);
   return 0;
 }
