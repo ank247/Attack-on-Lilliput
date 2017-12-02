@@ -8,7 +8,7 @@ int main()
   uint64_t key[16], SBox[16];            /* key and SBox is an array of length 16 consisting [1,0] arbitrary bits, an user input.  */
   uint64_t BitString[16];                /* Considering Array with 16 Bits as a PlainText. */
   int i;
-   for(i = 0; i < 16; i++)
+  for(i = 0; i < 16; i++)
   {
     cin >> BitString[i]; 
   }
@@ -16,10 +16,10 @@ int main()
   {
     cin >> key[i]; 
   }
-  for(i = 0; i < 16; i++)              /* For now as a convenience taken as an user input. */
+  for(i = 0; i < 16; i++)               /* For now as a convenience taken as an user input. */
   {
     cin >> SBox[i]; 
   }
-  
+  key_encrypt(BitString, key, EncryptNumber);
   return 0;
 }
