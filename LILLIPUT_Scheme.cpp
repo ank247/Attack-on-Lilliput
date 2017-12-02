@@ -5,10 +5,10 @@ using namespace std;
 #include<stdlib.h>
 #include<string.h>
 
-uint64_t *Binary_Conversion(char* A)
+uint64_t *Binary_Conversion(char *A)
 {  
   int i;
-   char* BinaryConversion ;
+   char *BinaryConversion ;
    BinaryConversion = '' ;
   for(i = 0; i < '\0'; i++)
   {
