@@ -104,7 +104,7 @@ void permutation(uint64_t *EncryptedNumber, uint64_t key1[])
 
 int main()
 {
-  char* A;                                   /* Input the PlainText. */
+  char *A;                                   /* Input the PlainText. */
   uint64_t *b;                               /* Binary number stored. */
   uint8_t key[16], RK[2] ;                   /* RK are two binary digits[0,1] used as a key*/
   cin >> A ;                                 /* Input the Arbitrary String(including integers, symbols and so on) */
@@ -113,7 +113,7 @@ int main()
   n = strlen(b);
   if(int m = (n = n % 16) != 0)
   {
-    for(i = 0; i < n; i++)
+    for(i = 0; i < m; i++)
     {
       strcat(b,0);
     }
