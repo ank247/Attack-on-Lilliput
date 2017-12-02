@@ -31,5 +31,6 @@ int main()
   {
     cin >> key1[i];
   }
+  permutation(EncryptedNumber, key1);
   return 0;
 }
