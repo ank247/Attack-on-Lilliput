@@ -122,10 +122,10 @@ int main()
   }
   uint64_t *EncryptedNumber;
   n = strlen(b);
-  i = 0;
   do{
       Encrypted_Number(EncryptedNumber, b, n);
       permutation(EncryptedNumber, key1, permuted_number);
-  }while(i > round)
+      round--;
+  }while(round > 0)
   return 0;
 }
