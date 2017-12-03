@@ -1,3 +1,11 @@
+/* Sample Input:
+   BinaryInput:                 1 0 1 0 1 1 0 1 0 1 1 1 0 1 1 0
+   key_before_Sbox:             0 1 1 0 1 1 1 0 1 1 0 0 1 0 1 1
+   permutation_arrangement:     14 10 15 9 11 12 13 16 5 6 4 2 3 7 1 8
+   SBox:                        1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 1 
+*/
+
+
 #include<iostream>
 using namespace std;
 #include<stdlib.h>
