@@ -5,6 +5,10 @@
    SBox:                        1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 1 
 */
 
+/*
+   Output_after_Permutation_for_Rounding:   1 0 1 0 1 1 0 1 1 1 0 0 0 1 0 1 
+   Final_Considered_Output:                 1 1 0 1 0 0 0 1 1 1 0 1 1 0 1 0 
+*/
 
 #include<iostream>
 using namespace std;
