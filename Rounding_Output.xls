@@ -1,5 +1,6 @@
 /****** Showing convergence of Delta(XOR(Lilliput(m1),Lilliput(m2)) after each Round Encryption Before Permutation. *****/
 
+/****** This Forging Will Help in Man-in-the-Middle Attack. *******/
 
 Description	0	1	2	3	4	5	6	7	8	9	A	B	C	D	E	F
 
